@@ -1,14 +1,74 @@
-// Seleciona todos os elementos com a classe "hamburger"
-const hamburgers = document.querySelectorAll(".hamburger");
-
-// Verifica se há elementos encontrados antes de adicionar eventos
-if (hamburgers.length > 0) {
-  hamburgers.forEach((element) => {
-    element.addEventListener("click", () => {
-      // Alterna a classe "is-active" no elemento clicado
-      element.classList.toggle("is-active");
-    });
+$(document).ready(function() {
+  // Adiciona um evento de clique ao botão com a classe "openbtn"
+  $(".openbtn").click(function() {
+    // Alterna a classe "active" no botão
+    $(this).toggleClass('active');
   });
-} else {
-  console.warn("Nenhum elemento com a classe '.hamburger' foi encontrado.");
-}
+});
+
+// Seleciona os elementos
+const toggleButton = document.getElementById("toggleButton");
+const content = document.getElementById("content");
+
+// Adiciona um evento de clique ao botão
+toggleButton.addEventListener("click", function () {
+  // Verifica se o conteúdo está visível
+  if (content.classList.contains("hidden")) {
+    content.classList.remove("hidden");
+    content.classList.add("visible");
+  } else {
+    content.classList.remove("visible");
+    content.classList.add("hidden");
+  }
+});
+
+toggleButton.addEventListener("click", function () {
+  // Alterna o menu
+  if (content.classList.contains("hidden")) {
+    content.classList.remove("hidden");
+    content.classList.add("visible");
+    overlay.classList.remove("hidden");
+    overlay.classList.add("visible");
+  } else {
+    content.classList.remove("visible");
+    content.classList.add("hidden");
+    overlay.classList.remove("visible");
+    overlay.classList.add("hidden");
+  }
+});
+
+
+const overlay = document.getElementById("overlay");
+const body = document.querySelector("body"); // Ou outro contêiner principal, como o <body>
+
+// Adiciona evento ao botão
+toggleButton.addEventListener("click", function () {
+  if (content.classList.contains("hidden")) {
+    // Mostra o menu
+    content.classList.remove("hidden");
+    content.classList.add("visible");
+    overlay.classList.remove("hidden");
+    overlay.classList.add("visible");
+    
+    // Aplica blur no fundo da página (não no menu)
+    tudo.classList.add("blurred");
+  } else {
+    // Esconde o menu
+    content.classList.remove("visible");
+    content.classList.add("hidden");
+    overlay.classList.remove("visible");
+    overlay.classList.add("hidden");
+    
+    // Remove o blur do fundo da página
+    tudo.classList.remove("blurred");
+  }
+});
+
+// Adiciona evento para remover o menu e o blur ao clicar no overlay
+overlay.addEventListener("click", function () {
+  content.classList.remove("visible");
+  content.classList.add("hidden");
+  overlay.classList.remove("visible");
+  overlay.classList.add("hidden");
+  body.classList.remove("blurred");
+});
