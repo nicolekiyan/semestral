@@ -1,1 +1,132 @@
 caixa 3 e 4:
+
+
+
+
+
+parte dos recursos: 
+html:
+  <div class="recursos"><!--guarda tudo do recursos -->
+    <h3 class="Quaal">Conheça nossos recursos</h3>
+    <div class="reecursos">
+    <div class="square">
+        <img src="icon/game.png" alt="" class="insideSquare">
+        <h3 class="titleSquare">Jogos</h3>
+        <p class="squareText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod g elit, sed do eiusmod tempor a  tempor a qui  deserun est laborum."</p>
+    </div>
+    <!-- começo do segundo quadro -->
+    <div class="squaree">
+        <img src="icon/dicionario.png" alt="" class="insideSquaree">
+        <h3 class="titleSquare">Dicionário</h3>
+        <p class="squareText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod g elit, sed do eiusmod tempor a  tempor a qui  deserun est laborum."</p>
+    </div>
+    <!-- começo da terceira caixa -->
+    <div class="square">
+        <img src="icon/artigo.png" alt="" class="insideSquaaree">
+        <h3 class="titleSquare">Blog</h3>
+        <p class="squareText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod g elit, sed do eiusmod tempor a  tempor a qui  deserun est laborum."</p>
+    </div>
+</div>
+   </div> <!--fecha a q guarda tudo do recursos -->
+</body>
+
+css:
+/* começo do recursos */
+
+.recursos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Quaal{
+    font-family: Fonte titulo3;
+    font-size: 30px;
+    margin-top: 160px;
+}
+
+.square{
+    width: 320px;
+    height: 320px;
+    background-color: #426CC2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.square:hover {
+    transform: scale(1.05);
+}
+
+.titleSquare{
+    font-family: Fonte titulo;
+    font-size: 35px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.squareText{
+    font-family: light;
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+    width: 250px;
+}
+
+.insideSquare{
+    margin-top: 30px;
+    height: 70px;
+}
+
+/* fim do quadro de jogos */
+
+/* começo do segundo quadro  */
+
+.squaree{
+    width: 320px;
+    height: 320px;
+    background-color: #0B1956;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+}
+
+.squaree:hover{
+        transform: scale(1.05);
+}
+
+.insideSquaree{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+/* fim da segunda caixa */
+
+/* começo da terceira caixa */
+
+.insideSquaaree{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+/* fim das caixas */
+
+/* começo de todos */
+
+.reecursos{
+    display: flex;
+    margin-top: 80px;
+}
+
