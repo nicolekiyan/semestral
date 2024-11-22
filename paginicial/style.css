@@ -526,3 +526,63 @@ border-radius: 100px 5px 5px 5px;
     margin-left: 80px;
     margin-top: 30px;
 }
+
+.flex{
+    margin-bottom: 120px;
+}
+
+
+/* circulos com u */
+
+.circulu{
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B1956;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.circulu p{
+    font-size: 30px;
+    color: #F6F1E7;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.circuluu{
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F2E7;
+    border: solid #0B1956 1px;
+}
+
+.circuluu p{
+    font-size: 30px;
+    color: #0B1956;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.circulus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+
+#linha{
+
+    width: 1000px;
+    color: #000;
+    background: #000000;
+    padding: 2px;
+}
+
